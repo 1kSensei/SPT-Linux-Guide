@@ -41,7 +41,14 @@ script:
         description: Installing game dependencies ...
         name: winetricks
         prefix: $GAMEDIR
-
+    
+    - task:
+        app: dotnet48
+        arch: win64
+        description: Installing .NET 4.8 for compatibility...
+        name: winetricks
+        prefix: $GAMEDIR   
+    
     # Install .NET Desktop Runtime 9.0
     - task:
         arch: win64
